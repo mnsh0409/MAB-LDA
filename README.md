@@ -222,6 +222,4 @@ The temporal difference (TD) checkpoint in `model_base.py` implements the same p
 MIT License. See [LICENSE](LICENSE).
 
 The SemEval and MAMS datasets are subject to their own respective licenses and are not redistributed here.
-## Pipeline
-![MAB-LDA Pipeline](figures/mab_pipeline.png)
 
