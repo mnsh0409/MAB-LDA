@@ -24,6 +24,11 @@ BERT subword tokens → Gibbs sampler → Herfindahl reward (HHI)
 ## Pipeline
 ![MAB-LDA Pipeline](figures/mab_pipeline.png)
 
+*Blue boxes are novel contributions. At each token assignment, 
+Thompson sampling draws z*; the Herfindahl score determines 
+whether to accept and update ρ. The dynamic gate s(t) sharpens 
+the Dirichlet as the ELBO improves.*
+
 ---
 
 ## Results (SemEval-2014 Restaurant, K = 5)
