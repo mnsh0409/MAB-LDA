@@ -1,0 +1,31 @@
+# MAB-LDA: Multi-Armed Bandit Guided LDA for Unsupervised Aspect Discovery
+# ICDM 2026 — requirements.txt
+#
+# Install:  pip install -r requirements.txt
+# Tested on Python 3.10 / 3.11 / 3.12, Ubuntu 22.04 / 24.04, Windows 11
+
+# ── Core scientific stack ────────────────────────────────────────────────────
+numpy>=1.26,<3.0           # arrays, random number generation, linalg
+scipy>=1.12                # scipy.optimize.linear_sum_assignment (Hungarian),
+                           # scipy.special (digamma / Dirichlet update),
+                           # scipy.sparse.csr_matrix (subword baseline DTM)
+pandas>=2.0                # results CSV I/O, DataFrame aggregation
+
+# ── Deep learning / tokenisation ─────────────────────────────────────────────
+torch>=2.1                 # tensor ops, DataLoader, MAB_SEED seeding
+transformers>=4.40         # AutoTokenizer (BERT WordPiece), bert-base-uncased
+
+# ── Topic model baselines ─────────────────────────────────────────────────────
+scikit-learn>=1.4          # NMF, LatentDirichletAllocation (subword baselines),
+                           # classification_report, f1_score,
+                           # ENGLISH_STOP_WORDS
+
+# ── Optional: progress bars ───────────────────────────────────────────────────
+tqdm>=4.66                 # sweep-level progress (used in model_base.py if present)
+
+# ── Large-scale data loading (scalability experiments) ───────────────────────
+datasets>=2.19             # HuggingFace streaming loader for Yelp (Table VIII),
+                           # Future: PubMed, Amazon
+
+# ── Testing ──────────────────────────────────────────────────────────────────
+pytest>=8.0               # run: pytest tests/ -v
