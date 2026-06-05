@@ -39,3 +39,5 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+figures/
+add_test_yml.sh
